@@ -1,11 +1,11 @@
 import './App.css';
 import Layout from './components/layout/Layout';
+import BurgerBuilder from './containers/burgerBuilder/BurgerBuilder';
 function App() {
   return (
     <div>
         <Layout>
-          <p>theis are the childrens</p>
-          <p>theis are the childrens</p>
+          <BurgerBuilder />
         </Layout>
     </div>
   );
