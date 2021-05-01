@@ -1,7 +1,7 @@
 .BreadBottom {
   height: 13%;
   width: 80%;
-  background: linear-gradient(#F08E4A, #e27b36);
+  background: linear-gradient(#f08e4a, #e27b36);
   border-radius: 0 0 30px 30px;
   box-shadow: inset -15px 0 #c15711;
   margin: 2% auto;
@@ -82,7 +82,6 @@
   box-shadow: inset 1px 3px #c9c9c9;
 }
 
-
 .Meat {
   width: 80%;
   height: 8%;
@@ -126,21 +125,166 @@
 
 @media (min-width: 500px) and (min-height: 400px) {
   .Burger {
-      width: 350px;
-      height: 300px;
+    width: 350px;
+    height: 300px;
   }
 }
 
 @media (min-width: 500px) and (min-height: 401px) {
   .Burger {
-      width: 450px;
-      height: 400px;
+    width: 450px;
+    height: 400px;
   }
 }
 
 @media (min-width: 1000px) and (min-height: 700px) {
   .Burger {
-      width: 700px;
-      height: 600px;
+    width: 700px;
+    height: 600px;
   }
+}
+.burger-controls-container {
+  height: auto;
+  width: 100%;
+  background-color: #cf8f2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem 0;
+  color: black;
+  font-weight: 800;
+  padding: 30px 0;
+}
+.burger-control-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  align-self: center;
+}
+
+.burger-control-container button {
+  display: block;
+  padding: 5px;
+  margin: 0 5px;
+  width: 80px;
+  border: 1px solid #aa6817;
+  cursor: pointer;
+  outline: none;
+}
+.more {
+  color: white;
+  background-color: #8f5e1e;
+}
+.more:hover {
+  background-color: #996a2d;
+}
+.less {
+  background-color: #d39952;
+  color: white;
+}
+.less:disabled {
+  background-color: #b39570;
+}
+.less:hover {
+  background-color: #f1b56a;
+}
+
+.OrderButton {
+  background-color: #dad735;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid #966909;
+  color: #966909;
+  font-family: inherit;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  box-shadow: 2px 2px 2px #966909;
+}
+
+.OrderButton:hover,
+.OrderButton:active {
+  background-color: #a0db41;
+  border: 1px solid #966909;
+  color: #966909;
+}
+
+.OrderButton:disabled {
+  background-color: #c7c6c6;
+  cursor: not-allowed;
+  border: 1px solid #ccc;
+  color: #888888;
+}
+
+.OrderButton:not(:disabled) {
+  animation: enable 0.3s linear;
+}
+
+@keyframes enable {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.Modal {
+  position: fixed;
+  z-index: 500;
+  background-color: white;
+  width: 70%;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px black;
+  padding: 16px;
+  left: 15%;
+  top: 30%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+@media (min-width: 600px) {
+  .Modal {
+    width: 500px;
+    left: calc(50% - 250px);
+  }
+}
+
+.backdrop {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.Button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.Button:first-of-type {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.Success {
+  color: #5C9210;
+}
+
+.Danger {
+  color: #944317;
 }
